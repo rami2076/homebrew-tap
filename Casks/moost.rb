@@ -14,7 +14,5 @@ cask "moost" do
     remove the quarantine attribute:
 
       xattr -dr com.apple.quarantine /Applications/Moost.app
-
-    Or install with: brew install --cask --no-quarantine moost
   EOS
 end
