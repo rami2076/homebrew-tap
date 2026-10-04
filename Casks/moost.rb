@@ -1,6 +1,6 @@
 cask "moost" do
-  version "1.10.0"
-  sha256 "340f283a58ba686deb8c88b9f679dc1bca65173cbf50aebd468ad26692389f58"
+  version "2.0.0-macos"
+  sha256 "383cb2fd51e68182ff8980b16c7164c06cb87e19dd00b314e57dfe0c6a84ef11"
 
   url "https://github.com/rami2076/moost/releases/download/v#{version}/Moost-#{version}.dmg"
   name "Moost"
@@ -8,11 +8,9 @@ cask "moost" do
   homepage "https://github.com/rami2076/moost"
 
   app "Moost.app"
-  # Moost.app に同梱した MCP サーバーを CLI からも直接叩けるように
-  # symlink する（Issue #45）。設定画面から連携登録する際は、
-  # インストール先アプリの中の実体パスを直接指定するため
-  # この symlink 自体は経由しない
-  binary "#{appdir}/Moost.app/Contents/Resources/moost-mcp"
+  # MoostApp は MCP サーバー内蔵の単一バイナリ。
+  #  /  を CLI から使えるようにする
+  binary "#{appdir}/Moost.app/Contents/MacOS/MoostApp", target: "moost"
 
   caveats <<~EOS
     Moost is currently ad-hoc signed. If Gatekeeper blocks the first launch,
