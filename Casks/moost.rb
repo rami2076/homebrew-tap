@@ -9,7 +9,7 @@ cask "moost" do
 
   app "Moost.app"
   # MoostApp は MCP サーバー内蔵の単一バイナリ。
-  #  /  を CLI から使えるようにする
+  # moost mcp / moost --version を CLI から使えるようにする
   binary "#{appdir}/Moost.app/Contents/MacOS/MoostApp", target: "moost"
 
   caveats <<~EOS
