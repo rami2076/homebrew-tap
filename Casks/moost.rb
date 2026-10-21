@@ -1,6 +1,6 @@
 cask "moost" do
-  version "2.2.1-macos"
-  sha256 "6c235d165f329666655dd74fffb277d57de6fc799c367e80480ceb03295a2f47"
+  version "2.3.0-macos"
+  sha256 "5740d69104d040ed778ffad9d4f2f9613e5c0eca8b947bbedac98b91548ab1bb"
 
   url "https://github.com/rami2076/moost/releases/download/v#{version}/Moost-#{version}.dmg"
   name "Moost"
